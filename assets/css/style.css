@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1400px;
+}
+
+body {
+    background-color: black;
+    width: 100%;
+}
+
+/* -------------------------------------- HEADER -------------------------------*/
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1400px;
+}
+
+#logoJS {
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* marquee  */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background: black;
+    color: white;
+    padding: 10px 0;
+    top: 15vh;
+    position: sticky;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 30s linear infinite;
+}
+
+.marquee-content span {
+    padding: 0 2rem;
+    white-space: nowrap;
+    background: black;
+    color: white;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* -------------------------------------- MAIN -------------------------------*/
+/* Estilos base: Mobile-first */
+body {
+    width: 100%;
+    max-width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+#al_lado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    min-height: auto;
+}
+
+.titulo-descripcion, .imagen-principal {
+    flex: 1;
+    width: 100%;
+}
+
+#imgPrincipal {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+#epigrafe {
+    font-size: 1.2rem;
+    color: aliceblue;
+}
+
+/* Estilos para los botones */
+.botones {
+    width: 100%;
+    max-width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0.5rem;
+}
+
+.boton {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    width: 80%;
+}
+
+.boton:hover {
+    background-color: #555;
+}
+
+/* ---------------------- FOOTER ---------------------- */
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 200px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px; /* Reduce la distancia debajo del h2 */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0; /* Elimina cualquier espacio superior en la lista */
+}
+
+
+
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+
+/* Estilos solo para la sección de enlaces útiles */
+.enlaces-utiles {
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enlaces-utiles h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Ajusta la distancia con el siguiente elemento */
+}
+
+.enlaces-utiles ul.enlaces-lista {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px; /* Reduce el margen superior de la lista */
+}
+
+.enlaces-utiles ul.enlaces-lista li {
+    margin-bottom: 5px; /* Ajusta el espacio entre los elementos de la lista */
+}
+
+.enlaces-utiles ul.enlaces-lista li a {
+    text-decoration: none;
+    color: white; /* O el color que prefieras */
+}
+
+.enlaces-utiles ul.enlaces-lista li a:hover {
+    text-decoration: underline; /* Para un pequeño efecto en hover */
+}
+
+/* ------------------------ Media Queries -------------------------- */
+/* Ajustes para pantallas medianas */
+@media (min-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    #al_lado {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 70vh;
+    }
+
+    .titulo-descripcion, .imagen-principal {
+        flex: 0 1 45%;
+        max-width: 45%;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    #epigrafe {
+        font-size: 1.5rem;
+    }
+
+    .botones {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .boton {
+        width: auto;
+        flex: 0 1 auto;
+        margin: 0 5px;
+    }
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 1024px) {
+    main {
+        max-width: 1400px;
+    }
+
+    .titulo-descripcion, .imagen-principal {
+        flex: 0 1 40%;
+        max-width: 50%;
+    }
+
+    #imgPrincipal {
+        height: 70vh;
+        max-height: 70vh;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    #epigrafe {
+        font-size: 1.8rem;
+    }
+
+    .botones {
+        gap: 30px;
+    }
+}
