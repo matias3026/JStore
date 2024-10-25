@@ -1,148 +1,147 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JStore</title>
     <!-- css-->
-     <link rel="stylesheet" href="./assets/css/styleHeaderFooter.css">
-     <link rel="stylesheet" href="./assets/css/styleTienda.css">
-     <!--iconos -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<!--Favicon-->
-<link rel="shortcut icon" href="./assets/img/logoJs.ico" type="image/x-icon">
-  <!-- boostrap-->
+    <link rel="stylesheet" href="./assets/css/styleHeaderFooter.css">
+    <link rel="stylesheet" href="./assets/css/styleTienda.css">
+    <!--iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="./assets/img/logoJs.ico" type="image/x-icon">
+    <!-- bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="./"><img id = 'logoJS' src="assets/img/logoJs.png" alt="logo de javaScript - js logo">tore</a>
-              
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./"><img id='logoJS' src="assets/img/logoJs.png" alt="logo de javaScript - js logo">tore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                  
-                  
-                  <li class="nav-item">
-                    <a class="nav-link" href="./resena.html">Reseña</a>
-                  </li>
-                  
-                  <li class="nav-item">
-                    <a class="nav-link" href="./acercaDe.html">Acerca de</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./contacto.html">Tienda</a>
-                  </li>
-                  
-                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="./resena.html">Reseña</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./acercaDe.html">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
                 </ul>
-              </div>
-            </div>
-          </nav>
-          <div class="marquee">
-            <div class="marquee-content">
-                <span>Últimas novedades en tecnología: Laptops, Desktops, Software y más!</span>
-                <span>Grandes descuentos en productos seleccionados!</span>
-                <span>Nuevos ingresos: accesorios de gaming de alta calidad!</span>
-                <span>Servicios de soporte técnico profesional!</span>
             </div>
         </div>
-    </header>
-    <main>
-        <div class="filtros">
-            <div class="busqueda">
+    </nav>
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>Últimas novedades en tecnología: Laptops, Desktops, Software y más!</span>
+            <span>Grandes descuentos en productos seleccionados!</span>
+            <span>Nuevos ingresos: accesorios de gaming de alta calidad!</span>
+            <span>Servicios de soporte técnico profesional!</span>
+        </div>
+    </div>
+</header>
+<main class="container-fluid my-4">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="filtros p-3 bg-light rounded">
                 <h2>Buscar Productos:</h2>
-                <input type="search" id="buscar" name="buscar" placeholder="Buscar por nombre">
-            </div>
-            <div class="ordenar">
+                <input type="search" id="buscar" class="form-control mb-3" placeholder="Buscar por nombre">
                 <h2>Ordenar productos:</h2>
-                <label>
-                    <input type="radio" name="ordenar" value="menor-mayor"> De menor a mayor precio
-                </label>
-                <label>
-                    <input type="radio" name="ordenar" value="mayor-mayor"> De mayor a menor precio
-                </label>
-            </div>
-            <div class="check">
+                <div>
+                    <label>
+                        <input type="radio" name="ordenar" value="menor-mayor"> De menor a mayor precio
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="ordenar" value="mayor-mayor"> De mayor a menor precio
+                    </label>
+                </div>
                 <h2>Filtrar productos por tipo:</h2>
-                <label for="almacenamiento">
-                    <input type="checkbox" id="almacenamiento" name="almacenamiento" value="almacenamiento"> Almacenamiento
-                </label>
-                <label for="mother">
-                    <input type="checkbox" id="mother" name="mother" value="mother"> Mothers
-                </label>
-                <label for="memoria">
-                    <input type="checkbox" id="memoria" name="memoria" value="memoria"> Memorias
-                </label>
-                <label for="procesador">
-                    <input type="checkbox" id="procesador" name="procesador" value="procesador"> Procesadores
-                </label>
-                <label for="alimentacion">
-                    <input type="checkbox" id="alimentacion" name="alimentacion" value="alimentacion"> Alimentación
-                </label>
-                <label for="periferico">
-                    <input type="checkbox" id="periferico" name="periferico" value="periferico"> Perifericos
-                </label>
-                
-            </div>
-        </div>
-        <div id="productos"></div>
-    </main>
-
-
-
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section about">
-                <h2 class="logo-text">JStore</h2>
-                <p>
-                    Somos tu tienda de confianza para productos informáticos, ofreciendo desde laptops hasta componentes para gaming. La tecnología a tu alcance.
-                </p>
-            </div>
-    
-            <div class="footer-section links enlaces-utiles">
-                <h2>Enlaces útiles</h2>
-                <ul class="enlaces-lista">
-                    
-                    
-                    <li><a href="./resena.html">Reseñas</a></li>
-                    <li><a href="./acercaDe.html">Acerca de</a></li>
-                    <li><a href="./registro.html">Registro</a></li>
-                    <li><a href="./contacto.html">Tienda</a></li>
-                </ul>
-            </div>
-            
-    
-            <div class="footer-section contact">
-                <h2>Contacto</h2>
-                <p><i class="fas fa-phone-alt"></i> +54 11 1234 5678</p>
-                <p><i class="fas fa-envelope"></i> info@JStore.com</p>
-            </div>
-    
-            <div class="footer-section social">
-                <h2>Redes sociales</h2>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                <div>
+                    <label for="almacenamiento">
+                        <input type="checkbox" id="almacenamiento" value="almacenamiento"> Almacenamiento
+                    </label>
+                    <br>
+                    <label for="mother">
+                        <input type="checkbox" id="mother" value="mother"> Mothers
+                    </label>
+                    <br>
+                    <label for="memoria">
+                        <input type="checkbox" id="memoria" value="memoria"> Memorias
+                    </label>
+                    <br>
+                    <label for="procesador">
+                        <input type="checkbox" id="procesador" value="procesador"> Procesadores
+                    </label>
+                    <br>
+                    <label for="alimentacion">
+                        <input type="checkbox" id="alimentacion" value="alimentacion"> Alimentación
+                    </label>
+                    <br>
+                    <label for="periferico">
+                        <input type="checkbox" id="periferico" value="periferico"> Perifericos
+                    </label>
                 </div>
             </div>
         </div>
-    
-        <div class="footer-bottom">
-            <p>&copy; 2024 JStore | Todos los derechos reservados</p>
+        <div class="col-md-8">
+            <div id="productos" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
         </div>
-    </footer>
-    
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
-    </html>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h2 class="logo-text">JStore</h2>
+            <p>
+                Somos tu tienda de confianza para productos informáticos, ofreciendo desde laptops hasta componentes para gaming. La tecnología a tu alcance.
+            </p>
+        </div>
+
+        <div class="footer-section links enlaces-utiles">
+            <h2>Enlaces útiles</h2>
+            <ul class="enlaces-lista">
+                <li><a href="./resena.html">Reseñas</a></li>
+                <li><a href="./acercaDe.html">Acerca de</a></li>
+                <!-- <li><a href="./registro.html">Registro</a></li> -->
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h2>Contacto</h2>
+            <p><i class="fas fa-phone-alt"></i> +54 11 1234 5678</p>
+            <p><i class="fas fa-envelope"></i> info@JStore.com</p>
+        </div>
+
+        <div class="footer-section social">
+            <h2>Redes sociales</h2>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 JStore | Todos los derechos reservados</p>
+    </div>
+</footer>
+
+<!-- -  bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- -  JS-->
+<script src="./assets/js/baseDatos.js"></script>
+<script src="./assets/js/funcionesProductos.js"></script>
+
+</body>
+</html>

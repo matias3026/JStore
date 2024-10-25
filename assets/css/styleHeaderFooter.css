@@ -46,7 +46,7 @@ header {
 
 
 /* ---------------------- FOOTER ---------------------- */
-/* Footer Styles */
+
 footer {
     background-color: #333;
     color: white;
@@ -77,13 +77,13 @@ footer {
 
 .footer-section h2 {
     font-size: 1.5rem;
-    margin-bottom: 5px; /* Reduce la distancia debajo del h2 */
+    margin-bottom: 5px; 
 }
 
 .footer-section ul {
     list-style: none;
     padding: 0;
-    margin-top: 0; /* Elimina cualquier espacio superior en la lista */
+    margin-top: 0; 
 }
 
 
@@ -132,24 +132,24 @@ footer {
 
 .enlaces-utiles h2 {
     font-size: 1.5rem;
-    margin-bottom: 10px; /* Ajusta la distancia con el siguiente elemento */
+    margin-bottom: 10px; 
 }
 
 .enlaces-utiles ul.enlaces-lista {
     list-style: none;
     padding-left: 0;
-    margin-top: 5px; /* Reduce el margen superior de la lista */
+    margin-top: 5px; 
 }
 
 .enlaces-utiles ul.enlaces-lista li {
-    margin-bottom: 5px; /* Ajusta el espacio entre los elementos de la lista */
+    margin-bottom: 5px; 
 }
 
 .enlaces-utiles ul.enlaces-lista li a {
     text-decoration: none;
-    color: white; /* O el color que prefieras */
+    color: white; 
 }
 
 .enlaces-utiles ul.enlaces-lista li a:hover {
-    text-decoration: underline; /* Para un pequeño efecto en hover */
+    text-decoration: underline; 
 }
