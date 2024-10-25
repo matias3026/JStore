@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JStore</title>
+    <!-- css-->
+     <link rel="stylesheet" href="./assets/css/styleHeaderFooter.css">
+     <link rel="stylesheet" href="./assets/css/styleContacto.css">
+     <!--iconos -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!--Favicon-->
+<link rel="shortcut icon" href="./assets/img/logoJs.ico" type="image/x-icon">
+  <!-- boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./"><img id = 'logoJS' src="assets/img/logoJs.png" alt="logo de javaScript - js logo">tore</a>
+              
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="./tienda.html">Tienda</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./resena.html">Reseña</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="./acercaDe.html">Acerca de</a>
+                  </li>
+                  
+                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="marquee">
+            <div class="marquee-content">
+                <span>Últimas novedades en tecnología: Laptops, Desktops, Software y más!</span>
+                <span>Grandes descuentos en productos seleccionados!</span>
+                <span>Nuevos ingresos: accesorios de gaming de alta calidad!</span>
+                <span>Servicios de soporte técnico profesional!</span>
+            </div>
+        </div>
+    </header>
+
+
+
+<div class="contacto-container">
+    <h1>Contacto</h1>
+    <p id="notificacion"></p>
+    <form id="contacto-form" 
+            action="https://formspree.io/f/xbjneppl"                    
+            method="POST">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+        </div>
+        <div class="form-group">
+            <label id="ms" for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="8" required >Ingrese al menos 50 caracteres</textarea>
+        </div>
+        <div id="contador-caracteres"></div>
+        <div class="form-group">
+            <label for="motivo">Motivo de contacto:</label>
+            <select id="motivo" name="motivo" required>
+                <option value="">Seleccionar</option>
+                <option value="consulta">Consulta</option>
+                <option value="reclamo">Reclamo</option>
+                <option value="sugerencia">Sugerencia</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="form-group2">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Deseo recibir el boletín informativo?</label>
+            </div>
+        </div>
+        
+        <!-- <div class="form-group">
+            <label for="adjuntar">Adjuntar archivo:</label>
+            <input type="file" id="adjuntar" name="adjuntar">
+        </div> -->
+        <!-- <button type="submit" class="btn" onclick="validarForm()">Enviar</button>  -->
+        <button type="submit" class="btn1" >Enviar</button> 
+    </form>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h2 class="logo-text">JStore</h2>
+            <p>
+                Somos tu tienda de confianza para productos informáticos, ofreciendo desde laptops hasta componentes para gaming. La tecnología a tu alcance.
+            </p>
+        </div>
+
+        <div class="footer-section links enlaces-utiles">
+            <h2>Enlaces útiles</h2>
+            <ul class="enlaces-lista">
+                
+                <li><a href="./tienda.html">Tienda</a></li>
+                <li><a href="./resena.html">Reseñas</a></li>
+                <li><a href="./acercaDe.html">Acerca de</a></li>
+                <li><a href="./registro.html">Registro</a></li>
+            </ul>
+        </div>
+        
+
+        <div class="footer-section contact">
+            <h2>Contacto</h2>
+            <p><i class="fas fa-phone-alt"></i> +54 11 1234 5678</p>
+            <p><i class="fas fa-envelope"></i> info@JStore.com</p>
+        </div>
+
+        <div class="footer-section social">
+            <h2>Redes sociales</h2>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 JStore | Todos los derechos reservados</p>
+    </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

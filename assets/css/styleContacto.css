@@ -1,0 +1,125 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+main{
+    height: 100vh;
+}
+/* Contenedor principal del formulario */
+.contacto-container {
+    max-width: 90%;
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    
+}
+
+.contacto-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#notificacion {
+    color: #ff3333;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Estilos generales para cada grupo de formulario */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Inputs y textarea */
+.contacto-container input[type="text"],
+.contacto-container input[type="email"],
+.contacto-container input[type="tel"],
+.contacto-container textarea,
+.contacto-container select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #857171;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contacto-container textarea {
+    resize: vertical;
+}
+
+.form-group2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Botón de enviar */
+.btn1 {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* validación y contador de caracteres */
+#contador-caracteres {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Media query para dispositivos grandes */
+@media (min-width: 768px) {
+    .contacto-container {
+        max-width: 500px;
+    }
+
+    .contacto-container h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contacto-container {
+        max-width: 600px;
+        padding: 30px;
+    }
+
+    .contacto-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .btn {
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+}
