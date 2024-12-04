@@ -64,8 +64,8 @@
     },
     {
         "id": 8,
-        "nombre": "Motherboard Micro-ATX",
-        "imagen": "./assets/img/miniatx.jpg",
+        "nombre": "Motherboard Micro",
+        "imagen": "./assets/img/itx.jpg",
         "descripcion": "Motherboard Micro-ATX compacta y eficiente.",
         "tipo": "mother",
         "precio": 90.99,
