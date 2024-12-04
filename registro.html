@@ -82,16 +82,23 @@
                     <input type="password" id="password" name="password" required>
                 </div>
                 <div class="formularioPass">
-                    <label for="password">Reingrese la Contraseña</label>
+                    <label for="password2">Reingrese la Contraseña</label>
                     <input type="password" id="password2" name="password" required>
+                </div>
+                <div class="formularioNombre formularioPass">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="formularioApellido formularioPass">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required>
                 </div>
                 <button type="button" class="btn" onclick="validarRegistro()">Confirmar</button>
             </form>
-            <div class="links">
-                <p><a href="inicioSesion.html">Volver Atrás</a></p>                
-            </div>
+            
         </div>
     </main>
     <script src="./assets/js/verificarSesion.js"></script>  
+    <script src="./assets/js/registrarUsuario.js"></script>
 </body>
 </html>

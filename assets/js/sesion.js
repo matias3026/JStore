@@ -5,10 +5,22 @@ async function obtenerUsuarios() {
         if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
         
         const usuarios = await response.json();
+        
+        // Guardar los usuarios en localStorage por si no se encuentra el archivo en el futuro
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        
+        // Devolver los usuarios cargados desde el JSON
         return usuarios;
     } catch (error) {
-        console.error("Error al cargar los usuarios:", error);
-        return [];
+        console.error("Error al cargar los usuarios desde el archivo JSON:", error);
+        
+        // Si no se pudo cargar el archivo JSON, intentar obtener los usuarios desde localStorage
+        const usuariosGuardados = localStorage.getItem('usuarios');
+        if (usuariosGuardados) {
+            return JSON.parse(usuariosGuardados);
+        }
+        
+        return []; // Si no hay usuarios, retornar un array vacío
     }
 }
 
@@ -20,8 +32,14 @@ async function iniciasteSesion() {
     // Obtener los usuarios desde el archivo JSON
     const usuarios = await obtenerUsuarios();
 
-    // Buscar al usuario que coincida con el email y la contraseña
-    const usuario = usuarios.find(u => u.email === email && u.password === password);
+    // Buscar al usuario en los usuarios cargados desde el JSON
+    let usuario = usuarios.find(u => u.email === email && u.password === password);
+
+    // Si no se encuentra en el JSON, buscar en los usuarios manuales en localStorage
+    if (!usuario) {
+        const usuariosManuales = JSON.parse(localStorage.getItem('usuariosManuales')) || [];
+        usuario = usuariosManuales.find(u => u.email === email && u.password === password);
+    }
 
     if (usuario) {
         // Si el usuario existe, se guarda la sesión en localStorage
