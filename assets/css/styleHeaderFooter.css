@@ -153,3 +153,30 @@ footer {
 .enlaces-utiles ul.enlaces-lista li a:hover {
     text-decoration: underline; 
 }
+
+/* Estilo personalizado para los botones */
+.btn-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Ajusta el tamaño según lo necesites */
+    height: 80px; /* Ambos botones tendrán el mismo tamaño */
+    text-decoration: none;
+    color: #000; /* Color del texto */
+    border: 1px solid #ccc; /* Borde para simular un botón */
+    border-radius: 5px; /* Borde redondeado */
+    background-color: #f8f9fa; /* Fondo */
+    font-size: 14px; /* Tamaño del texto */
+}
+
+.btn-custom i {
+    margin-bottom: 5px; /* Espacio entre el ícono y el texto */
+    color: #007bff; /* Color del ícono */
+}
+
+.btn-custom:hover {
+    background-color: #e2e6ea; /* Fondo al pasar el cursor */
+    color: #000;
+    text-decoration: none; /* Asegura que no haya subrayado al pasar el cursor */
+}

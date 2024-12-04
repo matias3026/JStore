@@ -1,0 +1,72 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 20px 0; 
+}
+
+.login-contenedor {
+    width: 100%;
+    max-width: 400px; 
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    
+    border-radius: 8px; 
+}
+
+.login-contenedor h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.formularioMail, .formularioPass {
+    margin-bottom: 20px;
+}
+
+.formularioMail label, .formularioPass label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formularioMail input, .formularioPass input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px; 
+    font-size: 16px;
+}
+
+button.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px; 
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: green; 
+    font-size:1.2rem;
+}
+
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+
