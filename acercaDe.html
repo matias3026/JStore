@@ -16,33 +16,42 @@
   </head>
   <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="./"><img id = 'logoJS' src="assets/img/logoJs.png" alt="logo de javaScript - js logo">tore</a>
-              
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <!-- Logo y enlaces del lado izquierdo -->
+            <a class="navbar-brand" href="./">
+                <img id='logoJS' src="assets/img/logoJs.png" alt="logo de javaScript - js logo">tore
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  
-                  <li class="nav-item">
-                    <a class="nav-link" href="./tienda.html">Tienda</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./contacto.html">Contacto</a>
-                  </li>
-                  
-                  <li class="nav-item">
-                    <a class="nav-link" href="./resena.html">Reseñas</a>
-                  </li>
-                  
-                  
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="./tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./resena.html">Reseña</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
                 </ul>
-              </div>
+                <!-- Botones de Carrito e Iniciar Sesión -->
+                <div class="d-flex">
+                    <a href="./carrito.html" class="btn-custom me-3 text-center">
+                        <i class="fas fa-shopping-cart fa-2x"></i>
+                        <span>Carrito</span>
+                    </a>
+                    <a href="./inicioSesion.html" class="btn-custom text-center">
+                        <i class="fas fa-user fa-2x"></i>
+                        <span>Ingresar</span>
+                    </a>
+                </div>
             </div>
-          </nav>
+        </div>
+    </nav>
           <div class="marquee">
             <div class="marquee-content">
                 <span>Últimas novedades en tecnología: Laptops, Desktops, Software y más!</span>
