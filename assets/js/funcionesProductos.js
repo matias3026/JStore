@@ -45,13 +45,42 @@ function actualizarProductos(productosBase, filtros) {
                     <p class="card-price">$${producto.precio.toFixed(2)}</p>
                     <p class="card-stock">Stock: ${producto.stock}</p>
                     <button class="btn btn-primary">Agregar al Carrito</button>
-                    <button class="btn btn-success">Ver mas</button>
+                    <button class="btn btn-success" id="verMas" data-id="${producto.id}">Ver más</button>
                 </div>
             </div>
         `;
 
         $contenedorTarjetas.appendChild(card);
     });
+
+    // Agregar eventos a los botones "Ver más"
+    const btnVerMas = document.querySelectorAll('#verMas');
+    btnVerMas.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            const idProducto = e.target.getAttribute('data-id');
+            const producto = productosBase.find((prod) => prod.id == idProducto);
+            mostrarModal(producto);
+        });
+    });
+}
+
+// Función para mostrar el modal con los detalles del producto
+function mostrarModal(producto) {
+    const modalImagen = document.getElementById('modal-imagen');
+    const modalNombre = document.getElementById('modal-nombre');
+    const modalDescripcion = document.getElementById('modal-descripcion');
+    const modalPrecio = document.getElementById('modal-precio');
+    const modalStock = document.getElementById('modal-stock');
+
+    modalImagen.src = producto.imagen;
+    modalNombre.textContent = producto.nombre;
+    modalDescripcion.textContent = producto.descripcion;
+    modalPrecio.textContent = `$${producto.precio.toFixed(2)}`;
+    modalStock.textContent = `Stock: ${producto.stock}`;
+
+    // Abre el modal
+    const modal = new bootstrap.Modal(document.getElementById('productoModal'));
+    modal.show();
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
