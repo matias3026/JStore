@@ -87,14 +87,32 @@ label {
     transition: background-color 0.3s;
 }
 
-.btn:hover {
+.btn1:hover {
     background-color: #0056b3;
 }
 
 /* validación y contador de caracteres */
 #contador-caracteres {
     font-size: 0.9rem;
-    color: #888;
+    color: #200101;
+    font-weight: bold;
+}
+
+.mal{
+    color: rgb(231, 231, 231);
+    background-color: rgba(247, 42, 93, 0.8);
+    font-size:1.5rem;
+    text-align: center;
+
+
+
+}
+.bien{
+    color: rgb(231, 231, 231);
+    background-color: rgba(18, 163, 50, 0.8);
+    font-size:1.5rem;
+    text-align: center;
+
 }
 
 /* Media query para dispositivos grandes */
