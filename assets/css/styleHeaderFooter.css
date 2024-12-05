@@ -1,4 +1,4 @@
-/* -------------------------------------- HEADER -------------------------------*/
+/* -------------------------------------- HEADER ------------------------------- */
 header {
     position: sticky;
     top: 0px;
@@ -12,7 +12,7 @@ header {
     border-radius: 50%;
 }
 
-/* marquee  */
+/* marquee */
 .marquee {
     width: 100%;
     overflow: hidden;
@@ -44,9 +44,7 @@ header {
     }
 }
 
-
 /* ---------------------- FOOTER ---------------------- */
-
 footer {
     background-color: #333;
     color: white;
@@ -86,9 +84,6 @@ footer {
     margin-top: 0; 
 }
 
-
-
-
 .footer-section ul li {
     margin-bottom: 10px;
 }
@@ -119,7 +114,6 @@ footer {
     font-size: 0.9rem;
     width: 100%;
 }
-
 
 /* Estilos solo para la sección de enlaces útiles */
 .enlaces-utiles {
@@ -160,23 +154,108 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80px; /* Ajusta el tamaño según lo necesites */
-    height: 80px; /* Ambos botones tendrán el mismo tamaño */
+    width: 80px; 
+    height: 80px; 
     text-decoration: none;
-    color: #000; /* Color del texto */
-    border: 1px solid #ccc; /* Borde para simular un botón */
-    border-radius: 5px; /* Borde redondeado */
-    background-color: #f8f9fa; /* Fondo */
-    font-size: 14px; /* Tamaño del texto */
+    color: #000; 
+    /* border: 1px solid #ccc;  */
+    border-radius: 5px; 
+    background-color: #f8f9fa; 
+    font-size: 14px; 
+    margin-top: 10px; 
 }
 
 .btn-custom i {
-    margin-bottom: 5px; /* Espacio entre el ícono y el texto */
-    color: #007bff; /* Color del ícono */
+    margin-bottom: 5px; 
+    color: #007bff; 
 }
 
 .btn-custom:hover {
-    background-color: #e2e6ea; /* Fondo al pasar el cursor */
+    background-color: #e2e6ea; 
     color: #000;
-    text-decoration: none; /* Asegura que no haya subrayado al pasar el cursor */
+    text-decoration: none; 
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    /* gap: 20px; */
+}
+
+.navbar-nav li {
+    padding: 5px;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 991px) {
+    
+    .navbar-nav {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+       
+    }
+    .d-flex {
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+    }
+    
+
+
+    .btn-custom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn-custom span {
+        display: none; 
+    }
+
+    .navbar-toggler {
+        margin-left: auto; 
+    }
+    
+    
+    .btn-custom i {
+        font-size: 1.5rem;
+    }
+
+
+    .d-flex {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Para pantallas más pequeñas (móviles) */
+    .btn-custom {
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .marquee-content span {
+        font-size: 0.8rem; 
+    }
 }

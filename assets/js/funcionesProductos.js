@@ -9,7 +9,7 @@ var $inputBuscar = document.getElementById('buscar');
 function actualizarProductos(productosBase, filtros) {
     $contenedorTarjetas.innerHTML = ''; // Limpiar los productos actuales
 
-    // Filtrar los productos según los filtros
+    // Filtrar los productos según los filtros del usuaruo 
     let productosFiltrados = productosBase.filter(producto => {
         // Filtro por categorías (checkbox)
         if (filtros.categorias.length > 0 && !filtros.categorias.includes(producto.tipo)) {
@@ -72,12 +72,18 @@ function mostrarModal(producto) {
     const modalDescripcion = document.getElementById('modal-descripcion');
     const modalPrecio = document.getElementById('modal-precio');
     const modalStock = document.getElementById('modal-stock');
+    const modalBoton = document.getElementById('add');
 
+    console.log(modalBoton);
     modalImagen.src = producto.imagen;
     modalNombre.textContent = producto.nombre;
     modalDescripcion.textContent = producto.descripcion;
     modalPrecio.textContent = `$${producto.precio.toFixed(2)}`;
     modalStock.textContent = `Stock: ${producto.stock}`;
+    modalBoton.classList.add("btn-primary");
+    modalBoton.classList.add("btn");
+    modalBoton.setAttribute('data-id', producto.id);
+
 
     // Abre el modal
     const modal = new bootstrap.Modal(document.getElementById('productoModal'));

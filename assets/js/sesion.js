@@ -1,7 +1,7 @@
 // Función para hacer fetch y obtener los usuarios desde el archivo JSON
 async function obtenerUsuarios() {
     try {
-        const response = await fetch('assets/json/usuarios.json'); // Asegúrate de que el archivo .json esté accesible
+        const response = await fetch('assets/json/usuarios.json'); 
         if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
         
         const usuarios = await response.json();
@@ -20,7 +20,7 @@ async function obtenerUsuarios() {
             return JSON.parse(usuariosGuardados);
         }
         
-        return []; // Si no hay usuarios, retornar un array vacío
+        return []; 
     }
 }
 
@@ -45,8 +45,8 @@ async function iniciasteSesion() {
         // Si el usuario existe, se guarda la sesión en localStorage
         localStorage.setItem('usuarioLogueado', JSON.stringify(usuario));
         
-        // Redirigir al usuario a la página de inicio o a la página que desees
-        window.location.href = "inicioSesion.html";  // Cambia esta URL según lo necesites
+        // Redirigir al usuario a la página de inicio 
+        window.location.href = "inicioSesion.html";  
     } else {
         // Si no se encuentra el usuario, mostrar un mensaje de error
         alert("Correo electrónico o contraseña incorrectos.");

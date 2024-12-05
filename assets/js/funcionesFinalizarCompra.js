@@ -84,7 +84,7 @@ function verificarSesion() {
     cargarCarrito(usuario.id);
 }
 
-// Finalizar la compra y redirigir a la página de confirmación
+
 // Finalizar la compra y redirigir a la página de confirmación
 function finalizarCompra() {
     const confirmar = confirm("¿Estás seguro que quieres finalizar tu compra?");
@@ -110,12 +110,12 @@ function finalizarCompra() {
     }
 }
 
-// Asignar el evento al botón desde el JS
+
 document.addEventListener("DOMContentLoaded", function() {
-    // Verificar la sesión y cargar el carrito
+    
     verificarSesion();
 
-    // Asignar el evento de finalizar compra al botón
+    
     const btnFinalizarCompra = document.getElementById("btnFinalizarCompra");
     if (btnFinalizarCompra) {
         btnFinalizarCompra.addEventListener("click", finalizarCompra);
@@ -124,5 +124,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// Llamar a la función verificarSesion al cargar la página
 document.addEventListener("DOMContentLoaded", verificarSesion);

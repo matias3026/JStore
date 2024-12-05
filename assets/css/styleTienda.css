@@ -43,7 +43,7 @@ main {
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s;
-    flex: 1 1 300px; /* Define un ancho base flexible */
+    flex: 1 1 300px; 
     max-width: 350px;
     margin: 15px;
     display: flex;
@@ -76,7 +76,7 @@ main {
     max-height: 250px; 
 }
 
-/* Limita el número de líneas de la descripción para evitar desbordamiento */
+
 .card-text {
     display: -webkit-box;
     -webkit-line-clamp: 3; /* Número de líneas visibles */
@@ -141,7 +141,7 @@ input[type="search"] {
     }
 }
 
-/* Pantallas medianas (tabletas) */
+/* Pantallas medianas (tablets) */
 @media (min-width: 577px) and (max-width: 768px) {
     .yo{
         display: flex;

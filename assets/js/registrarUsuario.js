@@ -15,20 +15,20 @@ function validarRegistro() {
     const nuevoUsuario = {
         id: generarIdUsuario(),
         email: email,
-        password: password,  // En un entorno real deberías cifrar la contraseña
+        password: password,  
         nombre: nombre,
         apellido: apellido,
-        role: "usuario", // Establecer el rol por defecto como "usuario"
+        role: "usuario", 
     };
 
-    // Guardar el nuevo usuario en localStorage (o en un archivo JSON si es el caso)
+    // Guardar el nuevo usuario en localStorage 
     const usuarios = JSON.parse(localStorage.getItem('usuariosManuales')) || [];  // Obtener los usuarios ya existentes
     usuarios.push(nuevoUsuario);
     localStorage.setItem('usuariosManuales', JSON.stringify(usuarios));
 
-    // Redirigir al usuario a la página de inicio de sesión o mostrar un mensaje
+    
     alert("Usuario registrado correctamente.");
-    window.location.href = './inicioSesion.html'; // Redirigir a la página de inicio de sesión
+    window.location.href = './inicioSesion.html'; 
 }
 
 // Generar un ID único para el nuevo usuario basado en el último ID registrado
