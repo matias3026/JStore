@@ -1,12 +1,63 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+/* Estilos base para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #ddd;
+
+    
+}
+
+
+
+.table {
+    display: block;
+    overflow-x: auto; /* Scroll horizontal */
+    white-space: nowrap;
+}
+
+thead {
+    background-color: #f8f9fa;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+th {
+    font-weight: bold;
+}
+
+td img {
+    width: 50px;
+    height: auto;
+}
+
+/* Contenedor para la cantidad */
 .cantidad-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 5px; /* Espaciado entre los elementos */
 }
 
 .cantidad-container button {
     flex-shrink: 0; /* Los botones no se reducen */
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 1rem;
 }
 
 .cantidad-container span {
@@ -15,21 +66,112 @@
     font-weight: bold;
 }
 
-
+/* Responsive: Reducción de tamaño en pantallas pequeñas */
 @media (max-width: 768px) {
-    .cantidad-container {
-        flex-direction: column; /* Cambia la dirección a vertical */
-        align-items: center; /* Centra los botones */
-        gap: 10px; /* Aumenta el espacio entre los elementos */
+    table {
+        font-size: 0.9rem;
     }
 
-    .cantidad-container button {
-        width: 40px; /* Ajusta el tamaño de los botones */
+    td img {
+        width: 40px;
     }
 
-    .cantidad-container span {
-        min-width: 0; /* Permite que el número ocupe menos espacio */
+    /* Ocultar columnas menos relevantes */
+    td:nth-child(3), th:nth-child(3), /* Descripción */
+    td:nth-child(6), th:nth-child(6)  /* Subtotal */ {
+        display: none;
     }
 }
 
+/* Diseño de tarjetas apiladas para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    /* *{
+        border: none !important;
+    } */
 
+    
+    .table {
+        display:flex;
+        flex-flow: column wrap;
+        width: 100%;
+        align-items: center;
+       
+        
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid #ddd; */
+        /* border: none !important; */
+        margin-bottom: 10px;
+        padding: 10px;
+        align-items: center; /* Centrar el contenido de las tarjetas */
+        justify-content: center;
+        gap: 10px; /* Espacio entre los elementos */
+    }
+
+    td {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar contenido dentro de las tarjetas */
+        padding: 8px 0;
+        border: none !important; /* Eliminar bordes internos */
+    }
+
+    td img {
+        width: 30px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: center;
+        color: #6c757d;
+        margin-bottom: 5px; /* Separación entre etiqueta y contenido */
+    }
+}
+
+/* Botones */
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+button.btn {
+    text-transform: uppercase;
+}
+
+button.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+button.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+button.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+button.btn-danger:hover {
+    background-color: #c82333;
+}
+
+button.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+}
