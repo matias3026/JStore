@@ -20,18 +20,21 @@ function cargarCarrito(usuarioId) {
 
         const fila = document.createElement("tr");
         fila.innerHTML = `
-            <td><img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid" style="width: 50px; height: auto;"></td>
-            <td>${producto.nombre}</td>
-            <td>${producto.descripcion}</td>
-            <td>$${producto.precio.toFixed(2)}</td>
-            <td>
-                <button class="btn btn-sm btn-secondary" onclick="modificarCantidad(${parseInt(producto.id)}, -1)">-</button>
-                <span>${producto.cantidad}</span>
-                <button class="btn btn-sm btn-secondary" onclick="modificarCantidad(${parseInt(producto.id)}, 1)">+</button>
-            </td>
-            <td>$${subtotal.toFixed(2)}</td>
-            <td><button class="btn btn-danger btn-sm" onclick="eliminarProducto(${parseInt(producto.id)})">Eliminar</button></td>
-        `;
+                <td><img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid" style="width: 50px; height: auto;"></td>
+                <td>${producto.nombre}</td>
+                <td>${producto.descripcion}</td>
+                <td>$${producto.precio.toFixed(2)}</td>
+                <td>
+                    <div class="cantidad-container">
+                        <button class="btn btn-sm btn-secondary" onclick="modificarCantidad(${parseInt(producto.id)}, -1)">-</button>
+                        <span>${producto.cantidad}</span>
+                        <button class="btn btn-sm btn-secondary" onclick="modificarCantidad(${parseInt(producto.id)}, 1)">+</button>
+                    </div>
+                </td>
+                <td>$${subtotal.toFixed(2)}</td>
+                <td><button class="btn btn-danger btn-sm" onclick="eliminarProducto(${parseInt(producto.id)})">Eliminar</button></td>
+            `;
+
         tablaCarrito.appendChild(fila);
     });
 
