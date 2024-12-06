@@ -8,11 +8,11 @@ body{
 /* Estilos base para la tabla */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse ;
     margin: 0 auto;
     text-align: center;
-    border: 1px solid #ddd;
-
+    /* border: 1px solid #ddd; */
+    
     
 }
 
@@ -22,6 +22,7 @@ table {
     display: block;
     overflow-x: auto; /* Scroll horizontal */
     white-space: nowrap;
+   
 }
 
 thead {
@@ -49,11 +50,11 @@ td img {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px; /* Espaciado entre los elementos */
+    gap: 5px; 
 }
 
 .cantidad-container button {
-    flex-shrink: 0; /* Los botones no se reducen */
+    flex-shrink: 0; 
     width: 30px;
     height: 30px;
     text-align: center;
@@ -61,8 +62,8 @@ td img {
 }
 
 .cantidad-container span {
-    min-width: 30px; /* Espacio mínimo para el número */
-    text-align: center; /* Centra el texto */
+    min-width: 30px; 
+    text-align: center; 
     font-weight: bold;
 }
 
@@ -80,6 +81,7 @@ td img {
     td:nth-child(3), th:nth-child(3), /* Descripción */
     td:nth-child(6), th:nth-child(6)  /* Subtotal */ {
         display: none;
+    
     }
 }
 
@@ -93,7 +95,7 @@ td img {
     .table {
         display:flex;
         flex-flow: column wrap;
-        width: 100%;
+        width: 100% !important;
         align-items: center;
        
         
@@ -110,17 +112,17 @@ td img {
         /* border: none !important; */
         margin-bottom: 10px;
         padding: 10px;
-        align-items: center; /* Centrar el contenido de las tarjetas */
+        align-items: center; 
         justify-content: center;
-        gap: 10px; /* Espacio entre los elementos */
+        gap: 10px; 
     }
 
     td {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centrar contenido dentro de las tarjetas */
+        align-items: center;
         padding: 8px 0;
-        border: none !important; /* Eliminar bordes internos */
+        border: none !important; 
     }
 
     td img {
@@ -132,7 +134,7 @@ td img {
         font-weight: bold;
         text-align: center;
         color: #6c757d;
-        margin-bottom: 5px; /* Separación entre etiqueta y contenido */
+        margin-bottom: 5px; 
     }
 }
 
