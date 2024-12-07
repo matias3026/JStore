@@ -242,6 +242,10 @@ footer {
     .d-flex {
         gap: 10px;
     }
+
+    .fa-shopping-cart{
+        margin-left: 12px;
+    }
 }
 
 @media (max-width: 576px) {
