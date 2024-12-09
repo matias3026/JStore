@@ -155,7 +155,7 @@
     {
         "id": 18,
         "nombre": "Monitor 24 pulgadas",
-        "imagen": "../assets/img/monitor.jpg",
+        "imagen": "./assets/img/monitor.jpg",
         "descripcion": "Monitor de 24 pulgadas Full HD con panel IPS.",
         "tipo": "periferico",
         "precio": 150.99,
