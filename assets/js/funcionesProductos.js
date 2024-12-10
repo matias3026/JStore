@@ -41,7 +41,8 @@ function actualizarProductos(productosBase, filtros) {
                 <img src="${producto.imagen}" alt="${producto.nombre}" class="card-img-top"> 
                 <div class="card-body"> 
                     <h5 class="card-title">${producto.nombre}</h5>
-                    
+                    <p class="card-text" style="display: none;">${producto.descripcion}</p>
+
                     <p class="card-price">$${producto.precio.toFixed(2)}</p>
                     <p class="card-stock">Stock: ${producto.stock}</p>
                     <button class="btn btn-primary" data-id="${producto.id}">Agregar al Carrito</button>
